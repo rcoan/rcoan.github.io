@@ -1,16 +1,39 @@
-<!doctype html>
-<html>
+<html data-lt-installed="true">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>Raul Coan</title>
+    <meta name="description" content="Everything that is (un)relevant from this developer's mind">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag :application %>
+    <%= javascript_include_tag :application %>
   </head>
-  <body>
+  <body class="container">
     <%= yield %>
   </body>
+
+  <footer>
+    <section class="footer">
+      <div class="footer-inner row">
+        <div class="col-md-12">
+          <p class="description">
+            Blog description goes here.
+          </p>
+        </div>
+        <div class="col-md-12">
+          <a href="#">Home</a>&nbsp;&nbsp;
+          <a href="#">About</a>&nbsp;&nbsp;
+          <a href="#">Contact</a>&nbsp;&nbsp;
+        </div>
+      </div>
+    </section>
+
+    <section class="copyright">© 2022</section>
+  </footer>
 </html>
