@@ -19,7 +19,7 @@
 ## Specific to RubyMotion:
 .dat*
 .repl_history
-# build/
+build/
 *.bridgesupport
 build-iPhoneOS/
 build-iPhoneSimulator/
@@ -58,3 +58,4 @@ build-iPhoneSimulator/
 .cache
 .DS_Store
 .sass-cache
+build/
