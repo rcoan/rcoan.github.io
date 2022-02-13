@@ -213,6 +213,11 @@ border-radius: 50px;
 .pagination{
 	margin: 5px 0;
 	justify-content: center;
+	display: block;
+}
+.pagination-index {
+	margin-top: 30px;
+	margin-bottom: 0;
 }
 .pagination-wrapper a{
 	color: #000;
