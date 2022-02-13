@@ -55,5 +55,11 @@ activate :blog do |blog|
   blog.new_article_template = File.expand_path('../source/templates/article_template.yml', __FILE__)
 end
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'main'
+  deploy.build_before = true
+end
+
 activate :directory_indexes
 
