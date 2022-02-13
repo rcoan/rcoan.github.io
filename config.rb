@@ -52,6 +52,7 @@ page '/*.txt', layout: false
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog_post_layout"
+  blog.new_article_template = File.expand_path('../source/templates/article_template.yml', __FILE__)
 end
 
 activate :directory_indexes

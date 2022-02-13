@@ -1,0 +1,13 @@
+---
+title: <%= @title %>
+subtitle:
+date: <%= @date.strftime('%F %R %Z') %>
+published: false
+---
+
+[comment]: <> (separator)
+
+---
+
+[comment]: <> (content)
+
