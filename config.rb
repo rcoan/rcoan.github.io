@@ -1,6 +1,10 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+require 'tzinfo'
+Time.zone = 'America/Sao_Paulo'
+
+
 # activate :autoprefixer do |prefix|
 #   prefix.browsers = "last 2 versions"
 # end
@@ -15,7 +19,7 @@ page '/*.txt', layout: false
 
 
 activate :blog do |blog|
-  # set options on blog
+  blog.prefix = "blog"
 end
 
 # With alternative layout
