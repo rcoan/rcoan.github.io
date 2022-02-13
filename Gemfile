@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.4'
-gem "middleman-blog", "~> 4.0"
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman', '~> 3.4'
+gem "middleman-blog"
+gem 'middleman-core', '~> 3.4'
 gem 'middleman-deploy'
 gem 'net-ftp'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
