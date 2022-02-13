@@ -1,8 +1,18 @@
 ---
 title: Home
+pageable: true
+per_page: 10
 ---
 
 <section class="post-list row">
+  <% if paginate && num_pages > 1 %>
+    <p>Page <%= page_number %> of <%= num_pages %></p>
+
+    <% if prev_page %>
+      <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
+  <% end %>
+
   <!-- Blog posts list -->
   <% blog.articles[0...5].each do |article| %>
     <div class="col-xs-12 col-sm-12 col-lg-12 post-line">
@@ -14,7 +24,12 @@ title: Home
   <!-- Pagination -->
   <div class="pagination-wrapper">
     <nav class="pagination" role="pagination">
+      <% if paginate %>
+        <% if next_page %>
+          <p><%= link_to 'Next page', next_page %></p>
           <a class="older-posts" href="#"> <i class="fa-solid fa-chevron-down"></i> </a>
+        <% end %>
+      <% end %>
     </nav>
   </div>
 </section>
