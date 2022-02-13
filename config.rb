@@ -17,11 +17,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-
-activate :blog do |blog|
-  blog.prefix = "blog"
-end
-
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -53,3 +48,11 @@ end
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.layout = "blog_post_layout"
+end
+
+activate :directory_indexes
+
