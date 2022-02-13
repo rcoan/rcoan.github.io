@@ -120,7 +120,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  middleman (~> 4.2)
+  middleman (~> 4.4)
   middleman-autoprefixer (~> 2.7)
   middleman-blog (~> 4.0)
   middleman-deploy
