@@ -1,15 +1,16 @@
 <html data-lt-installed="true">
   <%= partial "partials/head" %>
   <body>
-    <section class="post-list post-content"><div class="post-data">
-      <h1 id="title"><%= current_article.title %></h1>
+    <section class="post-list post-content">
+      <div class="post-data content">
+        <h1 id="title"><%= current_article.title %></h1>
 
-      <span class="post-subtitle">
-        <%= current_article.data.subtitle %>
-      </span>
+        <div class="post-subtitle">
+          <p><%= current_article.data.subtitle %></p>
+        </div>
 
-      <%= yield %>
-
+        <%= yield %>
+      </div>
     </section>
   </body>
   <%= partial "partials/footer" %>
