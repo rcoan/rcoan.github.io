@@ -8,7 +8,7 @@ pageable: true
   <!-- Pagination -->
   <div class="pagination-wrapper">
     <nav class="pagination" role="pagination">
-      <% if paginate && num_pages > 1 %>
+      <% if paginate%>
         <% if prev_page %>
           <p><%= link_to '<i class="fa-solid fa-chevron-up"></i>', prev_page %></p>
         <% end %>
@@ -20,14 +20,23 @@ pageable: true
   <% page_articles.each do |article| %>
     <div class="col-xs-12 col-sm-12 col-lg-12 post-line">
       <span class="post-titles"><a href="<%= article.url %>"><h1><%= article.title %></h1></a></span>
-      <time class="dates"><br><%= article.date.strftime('%b %e %Y') %></time>
+      <time class="dates">
+        <% if article.data.subtitle.present? %>
+          <br>
+          <span>
+            <%= article.data.subtitle %>
+          </span>
+        <% end %>
+        <br>
+        <%= article.date.strftime('%b %e %Y') %>
+      </time>
     </div>
   <% end %>
 
   <!-- Pagination -->
   <div class="pagination-wrapper">
     <nav class="pagination" role="pagination">
-      <% if paginate %>
+      <% if paginate && num_pages > 1  %>
         <p class="pagination-index">Page <%= page_number %> of <%= num_pages %></p>
         <% if next_page %>
           <p><%= link_to '<i class="fa-solid fa-chevron-down"></i>', next_page %></p>
