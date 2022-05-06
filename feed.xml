@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Raul COan</title>
+  <subtitle>A dev's everyday thoughts</subtitle>
+  <id>https://raulcoan.com/blog</id>
+  <link href="https://raulcoan.com/blog"/>
+  <link href="https://raulcoan.com/feed.xml" rel="self"/>
+  <author>
+    <name>Raul Coan</name>
+  </author>
+</feed>
